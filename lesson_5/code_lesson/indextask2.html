@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>Селектори атрибутів</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      [data-description] {
+        background-color: lightgrey;
+      }
+      [href] {
+        font-size: 24px;
+      }
+
+      [href] [target=] {
+        color: blue;
+      }
+      [data-description="archors"] {
+        color: forestgreen;
+      }
+      [type="text"] {
+        background-color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Селектор атрибутів</h1>
+    </header>
+    <main>
+      <p data-description="attributes">
+        Атрибути використовуються для того щоб асоціювати деякі дані з певним
+        елементом
+      </p>
+      <p data-description="archors">
+        Силки використовуються в HTML документах для переходів на другі сторінки
+        тих же чи інших вебсайтів <a href="#"> того же </a> чи
+        <a target="_blank" href="https://www.wikipedia.org/"> інших </a>
+        вебсайтів
+      </p>
+      <div>
+        <p>
+          Інпути можуть приймати не тільки текстові дані від користувача а і
+          виступати в ролі чекбоксів і батьох інших елементів
+        </p>
+        <input type="text" />
+        <input type="checkbox" />
+        <input type="password" />
+      </div>
+    </main>
+  </body>
+</html>
