@@ -10,6 +10,30 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" type="text/css" href="selectors.css" />
+
+    <style>
+      img[alt="Pollution"] {
+        border: 5px dashed red;
+      }
+
+      img[src$=".jpg"] {
+        margin-left: 50px;
+      }
+
+      li[data-description*="even"] {
+        background-color: silver;
+      }
+      li[data-description^="even"] {
+        font-size: 24px;
+      }
+      a[href^="https://"]
+      {
+        color: green;
+      }
+      span[lang|="en"] {
+        font-size: 28px;
+      }
+    </style>
   </head>
 
   <body>
