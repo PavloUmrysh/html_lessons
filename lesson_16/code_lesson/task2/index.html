@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      input[type="checkbox"] {
+        visibility: hidden;
+        width: 0;
+        height: 0;
+      }
+      .checkmark {
+        width: 25px;
+        height: 25px;
+        background-color: #646060;
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      .checkbox {
+        padding-left: 30px;
+        position: relative;
+        font-size: 24px;
+      }
+
+      .checkbox input:checked + .checkmark {
+        background-color: #0f0;
+      }
+    </style>
+  </head>
+  <!--    
++ Стилізування input за допомогою label (звязати їх за допом. id )
++ щоб заховати input через style -visibility: hidden;
++positiom relative -
++ checkbox input:checked + .checkmark -коли всередині елемента 
+checkbox знаходиться імпут в стані checked + тоді наступний після 
+нього span з класом checkmarck стає кольором-.....
++
+
+-->
+  <body>
+    <label class="checkbox">
+      Checkbox
+      <input id="custom-checkbox" type="checkbox" name="agree" />
+      <span class="checkmark" for="custom-checkbox"></span>
+    </label>
+  </body>
+</html>

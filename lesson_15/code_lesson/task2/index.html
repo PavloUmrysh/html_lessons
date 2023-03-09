@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .main-video {
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+        margin-top: 50px;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <!--controls - щоб відтворити відео 
+2. margin не працює без display block ( inline block)
+3.margin має бути вище ніж margin top
+4.Poster -буде картинка на відео доки відео не запуститься-->
+    <video class="main-video" src="example.mp4" controls poster="poster.jpg">
+      <source src="example.mp4" type="video/mp4" />
+    </video>
+  </body>
+</html>

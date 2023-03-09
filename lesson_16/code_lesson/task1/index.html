@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .form-control {
+        margin: 16px;
+      }
+    </style>
+  </head>
+  <!-- Імпути це поля де вводити + imput має бути з Атрибутом Name
+    + щоб імпути були не врядок 
+можна в css завернути в display block або в body в div +
+checkbox щоб відмітити галучкою після апострофів написати checked
++ texterea це багаторядковий імпут -placeholder це підказка для користувача що потрібно вводити
++ button -кінцева кнопка для підтвердження заповненої форми
++ button submit по замовчуваню перезагрує сторінку
++ redonly -не дає можливості вводити текст
++ disabled не дає можливості ставити галку
++type="number" min="10" max="20" максимальне значення цифр
++ textarea maxlength="20" обмежує кількість введеня символів 
++ label назва
++id="Last-name-form-control" -for="Last-name-form-control"
+дає млжливість виділяти куди вводити текст
++ <input type="checkbox" id="....." name="....." /> <label for="....."
+>......</label - коли нажимаєш на ТЕКСТ ставиться галочка на lable
+ АБО просто  <lable>
+ +<input type="radio" id="......" name="....." />
+        <label for="......">....</label> - щоб галочки вибирались 
+        і по тексту і по імпутах  and checked по замовчуванням галочка
++ required - код що зобовязує обовязкове для заповнення форми
+-->
+  <body>
+    <form>
+      <div class="form-control">
+        <label for="Last-name-form-control">Last name</label>
+        <input
+          type="text"
+          id="Last-name-form-control"
+          name="lastName"
+          value="Emerson"
+        />
+      </div>
+      <div class="form-control">
+        <input type="number" min="10" max="20" value="17" name="age" />
+      </div>
+      <div class="form-control">
+        <label>
+          <input type="checkbox" name="agree" />
+          Agree with therms and conditions</label
+        >
+      </div>
+      <div class="form-control">
+        <input type="radio" id="gender-male" name="gender" />
+        <label for="gender-male">Male</label>
+        <input type="radio" id="gender-female" name="gender" checked />
+        <label for="gender-female">Femail</label>
+        <input type="radio" id="gender-secret" name="gender" />
+        <label for="gender-secret">Secret</label>
+      </div>
+      <div class="form-control">
+        <textarea
+          maxlength="20"
+          name="description"
+          placeholder="Type some story..."
+        >
+        </textarea>
+      </div>
+      <div class="form-control">
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </body>
+</html>
