@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+      integrity="sha256-WAgYcAck1C1/zEl5sBl5cfyhxtLgKGdpI3oKyJffVRI="
+      crossorigin="anonymous"
+    />
+    <style>
+      .main-content {
+        display: flex;
+        min-height: 100vh; /* мінімальна висота картинки */
+      }
+      .gallery {
+        display: flex;
+        width: 80%;
+        background-color: coral;
+      }
+      .ideas {
+        width: 20%;
+        background-color: aqua;
+        display: flex;
+      }
+      .main-image {
+        max-width: 100%; /* щоб картинка ростягувалась максимально з Хорошою якістю*/
+        margin: auto;
+        box-shadow: 0px 10px 19px -9px rgba(0, 0, 0, 0.75); /* тінь */
+      }
+      .idea {
+        font-size: 24px;
+        text-transform: uppercase;
+        font-weight: 700;
+        padding: 4px; /*відступи */
+        color: white;
+        margin: auto;
+        overflow: hidden; /* щоб текст не виходив за границі контейнера*/
+        white-space: nowrap; /* щоб слова не перенисились в інший рядок*/
+        text-overflow: ellipsis; /* після тексту три крапки якщо не вмістився*/
+      }
+      /* Всередині блочного елемента на інлайнову картинку margin не працює
+      display block + margin: auto - діє по горизонталі
+      display flex + margin: auto -діє по гориз і верт
+      -Сайт cssmatic.com - тіні
+      -
+      */
+    </style>
+  </head>
+
+  <body>
+    <main class="main-content">
+      <section class="gallery">
+        <img
+          class="main-image"
+          src="https://gromcode.s3.eu-central-1.amazonaws.com/front-end/html-css/lesson21/task2/nature.jpeg"
+          alt="tree on the land"
+        />
+      </section>
+      <aside class="ideas">
+        <span class="idea">Keep calm</span>
+      </aside>
+    </main>
+  </body>
+</html>

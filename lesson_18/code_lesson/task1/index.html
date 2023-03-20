@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .row {
+        display: flex;
+      }
+      .bird_small {
+        width: 64px;
+        height: 64px;
+      }
+      .bird_large {
+        width: 320px;
+        height: 320px;
+      }
+      .column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="row">
+      <div class="column">
+        <img class="bird_small" src="image.png" alt="PNG small image" />
+        <img class="bird_large" src="image.png" alt="PNG large image" />
+      </div>
+      <div class="column">
+        <img class="bird_small" src="image.svg" alt="PNG small image" />
+        <img class="bird_large" src="image.svg" alt="PNG large image" />
+        <!-- svg картинка 
+            
+        + width and height розмір картинки 
+        + viewBox -яка частина фігур буде відображена viewBox="0 65.326 100 100"
+        + <ellipse fill="#C6C6C6" можна міняти колір
+        +<path id="bird" stroke="blue" stroke-width="2" fill="#0f0"
+        ( stoke колір гран)
+         style
+        + flex-direction: column; -вирівнювання по колонках 
+        + align-items: center; -вирівнювання в середині колонки 
+        +  flex: 1; -вирівнювання 
+        + max-width: 100%; -ростяниться картинка на максимальний розмір з хорошою якістю
+        -->
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+.text-class {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+
+  justify-content: center; /* центруємо відносно осі Y */
+  align-items: center; /* центруємо відносно осі X */
+}
+.block {
+  display: flex;
+  height: 100px;
+  width: 250px;
+  border-radius: 10px;
+  background-color: coral;
+  margin: auto;
+
+  position: relative; /* додаємо позиціонування */
+  transform: top -100px; /* встановлюємо початкову позицію блоку */
+  animation-name: topandcalc; /* встановлюємо ім'я анімації */
+  animation-duration: 2s; /* тривалість анімації */
+  animation-fill-mode: forwards; /* залишаємо кінцеві стилі анімації */
+  animation-timing-function: ease; /* функція анімації */
+}
+
+@keyframes topandcalc {
+  0% {
+    top: -100px;
+  }
+  100% {
+    top: calc(50vh - 50px);
+  }
+}

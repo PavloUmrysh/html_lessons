@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+      integrity="sha256-WAgYcAck1C1/zEl5sBl5cfyhxtLgKGdpI3oKyJffVRI="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: #555;
+        font-size: 16px;
+        display: flex;
+        height: 100%;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+      }
+      .main {
+        display: inline-flex;
+        flex-grow: 1;
+        font-size: 1.25em;
+        line-height: 1.75em;
+      }
+      .header {
+        color: #ffff;
+        background-image: linear-gradient(60deg, red, orange);
+        text-align: center;
+      }
+
+      .footer {
+        background-color: #e5e5e5;
+        padding: 0.5em;
+        text-align: center;
+      }
+      .navigation {
+        padding: 0.5em;
+        width: 20%;
+      }
+      .section {
+        padding: 0.5em;
+        width: 60%;
+      }
+      .news {
+        padding: 0.5em;
+        width: 20%;
+      }
+      .css-units {
+        color: #8b0000;
+        background-color: #e5e5e5;
+        font-size: 1.125rem;
+        font-weight: 700;
+      }
+      .section__header {
+        font-size: 5vw;
+        text-align: center;
+      }
+      .nav-list {
+        padding: 0;
+        list-style: none;
+      }
+
+      .nav-list-item {
+        line-height: 2em;
+        margin-bottom: 0.5em;
+        padding-bottom: 0.5em;
+      }
+      .nav-list-link {
+        display: block;
+        background-color: #808080;
+        color: white;
+
+        text-decoration: none;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <h1>Responsive website</h1>
+    </header>
+    <main class="main">
+      <nav class="navigation">
+        <ul class="nav-list">
+          <li class="nav-list-item">
+            <a class="nav-list-link" href="#">Responsive images</a>
+          </li>
+          <li class="nav-list-item">
+            <a class="nav-list-link" href="#">Mediaqueries</a>
+          </li>
+          <li class="nav-list-item">
+            <a class="nav-list-link" href="#">Flexbox</a>
+          </li>
+        </ul>
+      </nav>
+      <section class="section">
+        <h2 class="section__header">True story</h2>
+        <p>
+          There are few ways to define (Є кілька способів визначити )
+          <code>font-size</code>:
+        </p>
+        <ul class="units-list">
+          <li>
+            <span class="css-units">px</span> are good if you need strict
+            definition for a size of text. In other cases it is better to use
+            relative units listed below. px підходять, якщо вам потрібно чітке
+            визначення розміру тексту.( В інших випадках краще використовувати
+            відносні одиниці, наведені нижче.)
+          </li>
+          <li>
+            <span class="css-units">em</span> based on current font size(em на
+            основі поточного розміру шрифту)
+          </li>
+          <li>
+            <span class="css-units">rem</span> based on(на основі)
+            <code>&lt;html&gt;</code> font-size(розмір шрифту)
+          </li>
+          <li><span class="css-units">%</span> based on parent font size</li>
+          <li>
+            <span class="css-units">vh</span> (viewport height) based on screen
+            height ((висота вікна перегляду) на основі екрана висота)
+          </li>
+          <li>
+            <span class="css-units">vw</span> (viewport width) based on screen
+            width ((ширина вікна перегляду) на основі екрана ширина)
+          </li>
+        </ul>
+      </section>
+      <aside class="news">
+        <h2>Not a news</h2>
+        <p>
+          A web page should look good on any device! ( Веб-сторінка має
+          виглядати добре на будь-якому пристрої!)
+        </p>
+      </aside>
+    </main>
+    <footer class="footer">
+      Welcome to the responsive world!(Ласкаво просимо до чуйного світу!)
+    </footer>
+  </body>
+</html>

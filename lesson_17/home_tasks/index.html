@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Chess board</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+      integrity="sha256-WAgYcAck1C1/zEl5sBl5cfyhxtLgKGdpI3oKyJffVRI="
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        box-sizing: border-box;
+        margin: 16px;
+      }
+
+      table {
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 550;
+        font-size: 20px;
+        text-align: center;
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+
+      .chess {
+        border: 1px solid rgb(7, 7, 7);
+        border-collapse: collapse;
+      }
+      tr,
+      td {
+        height: 50px;
+        width: 50px;
+      }
+
+      table tr:nth-child(even) td:nth-child(odd),
+      table tr:nth-child(odd) td:nth-child(even) {
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <table>
+        <tr>
+          <td style="background-color: white"></td>
+          <td style="background-color: white">A</td>
+          <td style="background-color: white">B</td>
+          <td style="background-color: white">C</td>
+          <td style="background-color: white">D</td>
+          <td style="background-color: white">E</td>
+          <td style="background-color: white">F</td>
+          <td style="background-color: white">G</td>
+          <td style="background-color: white">H</td>
+          <td style="background-color: white"></td>
+        </tr>
+        <tr>
+          <td style="background-color: white">8</td>
+          <td class="chess"></td>
+          <td class="chess"></td>
+          <td class="chess"></td>
+          <td class="chess"></td>
+          <td class="chess"></td>
+          <td class="chess"></td>
+          <td class="chess"></td>
+          <td class="chess"></td>
+          <td style="background-color: white">8</td>
+        </tr>
+        <tr>
+          <td style="background-color: white">7</td>
+          <td class="chess"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="chess"></td>
+          <td style="background-color: white">7</td>
+        </tr>
+        <tr>
+          <td style="background-color: white">6</td>
+          <td class="chess"></td>
+          <td class="chess"></td>
+          <td class="chess"></td>
+          <td class="chess"></td>
+          <td class="chess"></td>
+          <td class="chess"></td>
+          <td class="chess"></td>
+          <td class="chess"></td>
+          <td style="background-color: white">6</td>
+        </tr>
+        <tr>
+          <td style="background-color: white">5</td>
+          <td class="chess"></td>
+          <td class="chess"></td>
+          <td class="chess"></td>
+          <td class="chess"></td>
+          <td class="chess"></td>
+          <td class="chess"></td>
+          <td class="chess"></td>
+          <td class="chess"></td>
+          <td style="background-color: white">5</td>
+        </tr>
+        <tr>
+          <td style="background-color: white">4</td>
+          <td class="chess"></td>
+          <td class="chess"></td>
+          <td class="chess"></td>
+          <td class="chess"></td>
+          <td class="chess"></td>
+          <td class="chess"></td>
+          <td class="chess"></td>
+          <td class="chess"></td>
+          <td style="background-color: white">4</td>
+        </tr>
+        <tr>
+          <td style="background-color: white">3</td>
+          <td class="chess"></td>
+          <td class="chess"></td>
+          <td class="chess"></td>
+          <td class="chess"></td>
+          <td class="chess"></td>
+          <td class="chess"></td>
+          <td class="chess"></td>
+          <td class="chess"></td>
+          <td style="background-color: white">3</td>
+        </tr>
+        <tr>
+          <td style="background-color: white">2</td>
+          <td class="chess"></td>
+          <td class="chess"></td>
+          <td class="chess"></td>
+          <td class="chess"></td>
+          <td class="chess"></td>
+          <td class="chess"></td>
+          <td class="chess"></td>
+          <td class="chess"></td>
+          <td style="background-color: white">2</td>
+        </tr>
+        <tr>
+          <td style="background-color: white">1</td>
+          <td class="chess"></td>
+          <td class="chess"></td>
+          <td class="chess"></td>
+          <td class="chess"></td>
+          <td class="chess"></td>
+          <td class="chess"></td>
+          <td class="chess"></td>
+          <td class="chess"></td>
+          <td style="background-color: white">1</td>
+        </tr>
+        <tr>
+          <td style="background-color: white"></td>
+          <td style="background-color: white">A</td>
+          <td style="background-color: white">B</td>
+          <td style="background-color: white">C</td>
+          <td style="background-color: white">D</td>
+          <td style="background-color: white">E</td>
+          <td style="background-color: white">F</td>
+          <td style="background-color: white">G</td>
+          <td style="background-color: white">H</td>
+          <td style="background-color: white"></td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Transition</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+      integrity="sha256-WAgYcAck1C1/zEl5sBl5cfyhxtLgKGdpI3oKyJffVRI="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <!--псевдоклас:hover -наведення мишки 
+   transition-property: width, opacity;
+        transition-duration: 1s, 5s;  -анімація по ширині і який час 
+        через кому  можна добавляти функіції до анімації
+        або  transition: width 1s, opacity 5s;
+        +margin -відступ 
+        + opacity -прозорість картинки
+        .rect:nth-child( ) -ірархічні селектори щоб працювати без класу 
+        +  .rect:nth-child(5) {
+        transition-timing-function: ease-out; -анімація швидкість і зміна кольору спочатку-вкінці
+      
+       + transition: width 1s 2s, opacity 5s 2s; -третє по 2 сек це ЗАТРИМКА
+       +
+-->
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="rect linear">linear0</div>
+      <div class="rect ease">linear</div>
+      <div class="rect ease-in">ease-in-out</div>
+      <div class="rect ease-out">ease-in</div>
+      <div class="rect ease-in-out">ease-out</div>
+    </div>
+  </body>
+</html>
