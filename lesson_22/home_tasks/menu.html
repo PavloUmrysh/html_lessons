@@ -4,10 +4,83 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Adaptive menu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+.header {
+  height: 3em;
+  padding: 0 1em;
+  background-color: #eee;
+  display: flex;
+  align-items: center;/* вирівнює елементи вздовж поперечної осі */
+  justify-content: space-between;/*розміщує елементи вздовж головної осі з рівномірним проміжком між ними. */
+}
+.btn-menu {
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  vertical-align: middle;
+  display: none; /* приховувати кнопку за замовчуванням */
+}
+.btn-menu i {
+  font-size: 1.5rem;
+}
+.navigation {
+  width: 20%;
+  padding: 0.5em;
+  display: block; /* показувати меню навігації за замовчуванням */
+}
+.nav-list {
+  padding: 0;
+  list-style: none; /* забрати точки зі списку */
+  
+ 
+}
+.nav-list-item {
+  margin-bottom: 0.5em; /*відступ між елементами меню */
+ 
+}
+.nav-list-link {
+  
+  background-color: #808080;
+  color: white;
+  height: 2em;
+  display: block;
+padding: 0 0.5em;
+text-decoration: none; /*забрати нижні підчеркування */
+overflow: hidden; /* щоб текст не виходив за границі контейнера*/
+white-space: nowrap; /* щоб слова не перенисились в інший рядок*/
+        text-overflow: ellipsis; /* після тексту три крапки якщо не вмістився*/
+} 
+   /* Медіа-запит для екранів з шириною до 600px */
+   @media screen and (max-width: 600px) {
+      .btn-menu {
+        display: block; /* показуємо кнопку меню */
+      }
+      .navigation {
+        width: 100%; /* розширюємо меню навігації на весь екран */
+        position: absolute; /* розміщуємо його за межами видимого екрану */
+        top: 3em; /* вирівнюємо його нижче заголовку */
+        left: -100%; /* зсуваємо його за межі екрану ліворуч */
+        transition: left 0.3s ease; /* додаємо плавний перехід для анімації */
+      }
+      .navigation.show {
+        left: 0; /* переміщуємо меню навігації у видиму зону, коли до нього додається клас .show */
+      }
+    }
+  </style>
   </head>
 
   <body>
-    <header class="header"></header>
+    <header class="header">
+      <button class="btn-menu"><i class="fa fa-bars"></i></button>
+    </header>
     <main class="main">
       <nav class="navigation">
         <ul class="nav-list">

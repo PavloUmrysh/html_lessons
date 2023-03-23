@@ -85,12 +85,82 @@
         white-space: nowrap;
         text-overflow: ellipsis;
       }
-    </style>
+      #my-image img {
+        max-width: 100%; 
+        height: auto;
+        
+      }
+      img {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 2px - це відстань тіні від картинки по горизонталі та вертикалі
+4px - це радіус тіні
+rgba(0, 0, 0, 0.5) - це колір тіні у форматі RGBA (чорний колір з прозорістю 50%) */
+}
+    /* Стилі для маленьких екранів */
+  @media (max-width: 600px) {
+    #my-image img:last-child {
+      display: none; /* Якщо на елемент застосувати цю властивість, він буде повністю видалено з відображення сторінки, але збереже своє місце в DOM структурі документа.*/
+    }
+  }
+  
+  /* Стилі для великих екранів */
+  @media (min-width: 601px) {
+    #my-image img:first-child {
+      display: none;
+    }
+  }
+  /* стилі для елементів при ширині екрану від 600px до 1200px */
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  /* розташування навігації і основної секції в одному рядку */
+  .navigation, .section, .main {
+    display: inline-block;
+    vertical-align: top;
+  }
+  /* ширина навігації - 20%, основна секція - 80% */
+  .navigation {
+    width: 20%;
+  }
+  .section {
+    width: 80%;
+  }
+  
+  .news {
+    width: 100%;
+  }
+}
+
+
+@media screen and (min-width: 1201px)  {
+  /* розташування навігації і основної секції в одному рядку */
+  .navigation, .section, .main, .news {
+    display: flex;
+  flex-wrap: wrap;
+  }
+  /* ширина навігації - 20%, основна секція - 80% */
+  .navigation {
+    width: 20%;
+  }
+  .section {
+    width: 60%;
+  }
+  
+  .news {
+   
+    width: 20%;
+    margin: auto;
+  }
+}
+  
+  </style>
   </head>
   <body>
     <header class="header">
       <h1>Responsive website</h1>
+      
     </header>
+    <div id="my-image">
+      <img src="small.png" alt="sm">
+      <img src="big.png" alt="bg">
+    </div>
     <main class="main">
       <nav class="navigation">
         <ul class="nav-list">
